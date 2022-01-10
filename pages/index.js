@@ -7,7 +7,7 @@ export default function Home() {
         <title>Banzai Sushi</title>
       </Head>
 
-      <h1>Welcome to Next</h1>
+      <h1>...</h1>
     </div>
   )
 }
