@@ -1,3 +1,9 @@
+:root {
+--primary: #00ADB5;
+--secondary-1: #222831;
+--secondary-2: #393E46;
+--tertiary: #EEEEEE;
+}
 html,
 body {
   padding: 0;

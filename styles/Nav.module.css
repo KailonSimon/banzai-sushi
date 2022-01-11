@@ -1,7 +1,6 @@
 .nav {
-    height: 50px;
-    padding: 10px;
-    background-color: #222831;
+    min-height: 64px;
+    background-color: var(--secondary-1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,8 +13,9 @@
 }
 .nav ul li a {
     margin: 5px 15px;
-    color: #00ADB5
+    color: var(--primary);
+    text-transform: uppercase;
 }
 .nav ul li a:hover {
-    text-decoration: underline #EEEEEE;
+    text-decoration: underline var(--tertiary);
 }

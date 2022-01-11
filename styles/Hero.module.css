@@ -1,37 +1,39 @@
-.grid {
+.hero {
+	min-height: 200px;
+	width: 100%;
+	background-color: var(--secondary-2);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.hero img {
+    scale: .9;
+    filter: opacity(90%) grayscale(50%) drop-shadow(0 0 18px var(--primary));
+    border: 5px solid var(--tertiary);
+}
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    width: 800px;
+    height: auto;
+    border: 2px solid var(--secondary-2);
+    background-color: rgba(34, 40, 49, .8);
+    padding: 36px 36px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    max-width: 800px;
-  }
-  
-  .card {
-    margin: 1rem;
-    padding: 1.5rem;
-    text-align: left;
-    color: inherit;
-    text-decoration: none;
-    border: 1px solid #EEEEEE;
-    border-radius: 10px;
-    transition: color 0.15s ease, border-color 0.15s ease;
-    max-width: 300px;
-  }
-  
-  .card:hover,
-  .card:focus,
-  .card:active {
-    color: #00ADB5;
-    border-color: #00ADB5;
-  }
-  
-  .card h2 {
-    margin: 0 0 1rem 0;
-    font-size: 1.5rem;
-  }
-  
-  .card p {
+    align-items: center;
+}
+.hero-overlay-title {
+    font-family: 'Island Moments', cursive;
+    color: var(--tertiary);
+    font-size: 48px;
     margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
+    text-shadow: 2px 2px 5px var(--primary);
+}
+.hero-overlay-content {
+    font-size: 18px;
+    margin: 0;
+    color: var(--primary);
+}

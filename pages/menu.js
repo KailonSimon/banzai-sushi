@@ -1,4 +1,4 @@
-import MenuList from "../components/MenuList"
+import MenuList from "../components/Menu/MenuList"
 import { data } from "../components/data/data"
 
 const menu = () => {

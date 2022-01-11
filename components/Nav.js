@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Button from './Button'
 import navStyles from '../styles/Nav.module.css'
 
 const Nav = () => {
@@ -6,16 +7,19 @@ const Nav = () => {
         <nav className={navStyles.nav}>
             <ul>
                 <li>
+                    <Link href='/'>Home</Link>
+                </li>
+                <li>
                     <Link href='/menu'>Menu</Link>
                 </li>
                 <li>
-                    <Link href='/'>Locations</Link>
+                    <Link href='/locations'>Locations</Link>
                 </li>
                 <li>
-                    <Link href='/'>Careers</Link>
+                    <Link href='/careers'>Careers</Link>
                 </li>
                 <li>
-                    <Link href='/'>Order Now</Link>
+                    <Link href='/order'>Order Now</Link>
                 </li>
             </ul>
         </nav>

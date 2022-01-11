@@ -1,6 +1,6 @@
 .title a, 
 .title span {
-    color: #00ADB5;
+    color: var(--primary);
     text-decoration: none;
   }
   
