@@ -41,17 +41,23 @@ const useStyles = createStyles((theme) => ({
         marginTop: theme.spacing.md,
     },
 
-    cartButton: {
+    buttonWrapper: {    
+        display: 'flex',
+        width: '100%',
         position: 'absolute',
         bottom: 16,
-        marginTop: theme.spacing.xl,
+        left: 0,
+        padding: `0 ${theme.spacing.md}px`
+
+    },
+
+    cartButton: {
         fontWeight: 400
     }
 }));
 
 export function MenuItem({ item }) {
-    const { classes, cx } = useStyles();
-    const theme = useMantineTheme();
+    const { classes } = useStyles();
     const dispatch = useDispatch();
 
 
@@ -73,9 +79,9 @@ export function MenuItem({ item }) {
                 {item.description}
             </Text>
 
-            <Group position='center'>
-                <Button rightIcon={<ShoppingCartPlus size={20} />} className={classes.cartButton} color='cyan' onClick={() => dispatch(addToCart(item))}>Add to cart</Button>
-            </Group>
+            <div className={classes.buttonWrapper}>
+                <Button rightIcon={<ShoppingCartPlus size={20} />} className={classes.cartButton} color='cyan' onClick={() => dispatch(addToCart(item))} size='lg' fullWidth>Add to cart</Button>
+            </div>
 
         </Card>
     );

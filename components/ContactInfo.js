@@ -10,10 +10,6 @@ const useStyles = createStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
-
-        [theme.fn.smallerThan('sm')]: {
-        },
-
     },
 
     content: {
@@ -22,16 +18,14 @@ const useStyles = createStyles((theme) => ({
         backgroundColor: theme.colors.dark,
         textAlign: 'center',
         borderBottom: `2px solid ${theme.colors[theme.primaryColor][8]}`,
-
-        [theme.fn.smallerThan('sm')]: {
-
-        },
-
-
     },
 
     imageGridWrapper: {
         width: '100%',
+
+        [theme.fn.smallerThan('sm')]: {
+            order: 1
+        },
     },
 
     contentWrapper: {
@@ -49,6 +43,8 @@ const useStyles = createStyles((theme) => ({
         },
     },
 
+
+
     inner: {
         display: 'flex',
         flexDirection: 'column',
@@ -58,8 +54,16 @@ const useStyles = createStyles((theme) => ({
         height: '100%'
     },
 
+    contactAnchor: {
+        display: 'block',
+        height: '200px',
+        marginTop: '-200px',
+        visibility: 'hidden'
+    },
+
     subtitle: {
-        filter: `drop-shadow(0 0 2px ${theme.colors.cyan[8]})`
+        filter: `drop-shadow(0 0 2px ${theme.colors.cyan[8]})`,
+        color: theme.white
     },
 
     mapContainer: {
@@ -117,6 +121,7 @@ export default function ContactInfo() {
                 </Grid.Col>
                 <Grid.Col sm={12} md={6} className={classes.contentWrapper}>
                     <div className={classes.inner}>
+                        <div className={classes.contactAnchor} id='contact' />
                         <Title order={1} mb='md' className={classes.subtitle}>Contact us</Title>
                         <List
                             spacing='xs'

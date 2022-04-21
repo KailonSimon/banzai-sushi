@@ -69,6 +69,10 @@ const useStyles = createStyles((theme) => ({
         },
     },
 
+    button: {
+        fontWeight: 400
+    },
+
     content: {
         width: '100%',
         display: 'flex',
@@ -88,7 +92,8 @@ const useStyles = createStyles((theme) => ({
     },
 
     subtitle: {
-        filter: `drop-shadow(0 0 2px ${theme.colors.cyan[8]})`
+        filter: `drop-shadow(0 0 2px ${theme.colors.cyan[8]})`,
+        color: theme.white
     },
 
     description: {
@@ -115,9 +120,11 @@ export default function Hero() {
                     <Text weight={300} size='sm' mb='md' className={classes.description}>Banzai Sushi strives to source local, sustainable and organic when possible. We work hard to source premium ingredients and we cook everything from scratch with love.</Text>
                     <Group position='left'>
                         <Link href='/menu' passHref>
-                            <Button size='lg' variant='light' component='a'>Our Menu</Button>
+                            <Button size='lg' component='a' className={classes.button}>Order Now</Button>
                         </Link>
-                        <Button size='lg' component='a' href='#donation-form'>Order Now</Button>
+                        <Link href='#contact' passHref>
+                            <Button size='lg' href='#contact' variant='light' className={classes.button}>Contact Us</Button>
+                        </Link>
                     </Group>
                 </Grid.Col>
                 <Grid.Col sm={12} md={6}>

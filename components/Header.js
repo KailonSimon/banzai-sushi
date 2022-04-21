@@ -46,6 +46,7 @@ const useStyles = createStyles((theme) => ({
 
     title: {
         fontFamily: 'My Soul',
+        color: theme.white,
         filter: `drop-shadow(0 0 2px ${theme.colors.cyan[8]})`,
         cursor: 'pointer'
 
@@ -122,8 +123,8 @@ const useStyles = createStyles((theme) => ({
 const links = [
     { label: 'Home', link: '/' },
     { label: 'Our Menu', link: '/menu' },
-    { label: 'Locations', link: '/locations' },
-    { label: 'Contact Us', link: '/contact-us' },
+    //{ label: 'Locations', link: '/locations' },
+    //{ label: 'Contact Us', link: '/contact-us' },
 ]
 
 
@@ -134,15 +135,11 @@ export default function Header() {
     const [active, setActive] = useState(links[0].link);
     const { classes, cx } = useStyles();
     const [scroll, scrollTo] = useWindowScroll();
-
-    const cart = useSelector((state) => state.cart.items);
     const cartCount = useSelector(cartCountSelector);
 
     useEffect(() => {
         setActive(router.pathname)
     }, [router.pathname])
-
-    const [count, setCount] = useState(0);
 
     const items = links.map((link) => (
         <a
@@ -203,6 +200,7 @@ export default function Header() {
                         <Button
                             leftIcon={<ArrowUp />}
                             style={transitionStyles}
+                            sx={{ fontWeight: 500 }}
                             onClick={() => scrollTo({ y: 0 })}
                         >
                             Scroll to top

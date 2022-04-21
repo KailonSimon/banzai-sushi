@@ -13,7 +13,8 @@ const useStyles = createStyles((theme) => ({
     
     title: {
         marginBottom: theme.spacing.xl,
-        filter: `drop-shadow(0 0 2px ${theme.colors.cyan[8]})`
+        filter: `drop-shadow(0 0 2px ${theme.colors.cyan[8]})`,
+        color: theme.white
     }
 }))
 
