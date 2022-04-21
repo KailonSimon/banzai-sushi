@@ -1,13 +1,22 @@
 import Head from 'next/head'
+import ContactInfo from '../components/ContactInfo'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 import Hero from '../components/Hero'
 
 export default function Home() {
+
   return (
-    <div>
+    <>
       <Head>
         <title>Banzai Sushi</title>
       </Head>
-      <Hero />
-    </div>
+      <div style={{ display: 'flex', flexDirection: 'column', }}>
+        <Header />
+        <Hero />
+        <ContactInfo />
+        <Footer />
+      </div>
+    </>
   )
 }

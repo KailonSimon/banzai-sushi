@@ -1,12 +1,15 @@
 import MenuList from "../components/Menu/MenuList"
-import { data } from "../components/data/data"
+import { menuItems } from "../components/data/data"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 
-const menu = () => {
+export default function Menu() {
     return (
         <div>
-            <MenuList menuItems={data} />
+            <Header />
+            <MenuList menuItems={menuItems} />
+            <Footer />
         </div>
     )
 }
 
-export default menu

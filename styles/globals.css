@@ -8,13 +8,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Be Vietnam Pro',-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #393E46;
-}
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  src: url('../public/fonts/Be\ Vietnam\ Pro/BeVietnamPro-Regular.ttf');
 }
 
 a {
