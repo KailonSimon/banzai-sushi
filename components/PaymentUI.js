@@ -22,8 +22,8 @@ export default function PaymentUI() {
                     "US",
                 ],
             },
-            successUrl: "http://localhost:3000/",
-            cancelUrl: "http://localhost:3000/",
+            successUrl: "https://banzai-sushi.vercel.app/",
+            cancelUrl: "https://banzai-sushi.vercel.app/",
         });
     });
   }

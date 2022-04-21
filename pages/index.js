@@ -12,10 +12,8 @@ export default function Home() {
         <title>Banzai Sushi</title>
       </Head>
       <div style={{ display: 'flex', flexDirection: 'column', }}>
-        <Header />
         <Hero />
         <ContactInfo />
-        <Footer />
       </div>
     </>
   )

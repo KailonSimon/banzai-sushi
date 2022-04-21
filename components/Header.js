@@ -213,7 +213,7 @@ export default function Header() {
                 opened={drawerOpened}
                 onClose={() => setDrawerOpened(false)}
                 title='Cart'
-                padding='xl'
+                padding='md'
                 position='right'
             >
                 <CartDrawer />
