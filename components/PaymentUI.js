@@ -28,7 +28,7 @@ export default function PaymentUI() {
     });
   }
   return (
-      <Group direction="column" grow>
+      <Group direction="column" grow sx={{ position: 'relative', height: '40vh', paddingBottom: '8px' }}>
           <Group position="apart">
               <Text>Subtotal</Text>
               <Text>${cartValue}</Text>

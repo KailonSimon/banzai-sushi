@@ -215,6 +215,7 @@ export default function Header() {
                 title='Cart'
                 padding='md'
                 position='right'
+                sx={{ maxHeight: '100vh '}}
             >
                 <CartDrawer />
             </Drawer>

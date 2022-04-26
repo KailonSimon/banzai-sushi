@@ -19,20 +19,22 @@ export default function CartDrawer() {
     return (
         <>
             {cart.length ?
-                <Group direction="column" grow>
-                    <Text>Order Summary</Text>
-                    <Divider />
-                    <Text size="sm">{cartCount} items</Text>
-                    <ScrollArea sx={{ height: 350 }} classNames={{ thumb: classes.thumb }} type='scroll' scrollHideDelay={250} scrollbarSize={1}>
-                        <Group direction="column" grow>
+                <>
+                    <Group direction="column" grow sx={{ gap: '8px'}}>
+                        <Text>Order Summary</Text>
+                        <Divider />
+                        <Text size="sm">{cartCount} items</Text>
+                        <ScrollArea sx={{ height: '40vh' }} classNames={{ thumb: classes.thumb }} type='scroll' scrollHideDelay={250} scrollbarSize={1}>
+                            <Group direction="column" grow>
 
-                            {cart.map(item => {
-                                return <CartItem key={item.id} item={item} />
-                            })}
-                        </Group>
-                    </ScrollArea>
+                                {cart.map(item => {
+                                    return <CartItem key={item.id} item={item} />
+                                })}
+                            </Group>
+                        </ScrollArea>
+                    </Group>
                     <PaymentUI />
-                </Group>
+                </>
                 :
                 <Text>Your cart is empty</Text>
             }
